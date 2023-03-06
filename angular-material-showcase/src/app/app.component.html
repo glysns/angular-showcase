@@ -42,7 +42,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
+    background-color: #EDEDED;
     color: white;
     font-weight: 600;
   }
@@ -271,7 +271,14 @@
     z-index: -10;
     width: 1920px;
   }
-
+  span.title{
+    color: #00003C;
+    font-family: 'Roboto Slab';
+font-style: normal;
+font-weight: 300;
+font-size: 32px;
+line-height: 130%;
+  }
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
     .card-container > *:not(.circle-link) ,
@@ -308,7 +315,7 @@
     width="40"
     [src]="'assets/img/indice.png'" alt="image"
   />
-  <span>Safra Mesa de Credito</span>
+  <span class="title">Safra Mesa de Credito</span>
     <div class="spacer"></div>
 </div>
 
