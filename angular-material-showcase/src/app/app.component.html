@@ -103,6 +103,84 @@ line-height: 130%;
 <div class="content" role="main">
   <!-- Resources -->
   <h2>Crédito Correnstista PF - SEC</h2>
+  <form class="example-form">
+  
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>CPF</mat-label>
+        <input matInput>
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>ID</mat-label>
+        <input matInput>
+      </mat-form-field></td>
+    </tr></table>
+  
+    <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Address</mat-label>
+        <textarea matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Address 2</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </p>
+  
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>City</mat-label>
+        <input matInput placeholder="Ex. San Francisco">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>State</mat-label>
+        <input matInput placeholder="Ex. California">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>Postal Code</mat-label>
+        <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043">
+        <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+      </mat-form-field></td>
+    </tr></table>
+  </form>
+  
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dsTable">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="weight">
+        <th mat-header-cell *matHeaderCellDef> Weight </th>
+        <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="symbol">
+        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+  
   <mat-grid-list cols="4" rowHeight="100px">
     <mat-grid-tile
         [colspan]="3"
@@ -137,8 +215,6 @@ line-height: 130%;
     <mat-list-item>Contratos</mat-list-item>
     <mat-list-item>Ofertas por cliente</mat-list-item>
   </mat-list>
-
-
 
   <mat-list>
     <div mat-subheader>Folders</div>
@@ -182,43 +258,6 @@ line-height: 130%;
       </div>
     </mat-nested-tree-node>
   </mat-tree>
-  <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dsTable">
-  
-      <!-- Position Column -->
-      <ng-container matColumnDef="position">
-        <th mat-header-cell *matHeaderCellDef> No. </th>
-        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-      </ng-container>
-  
-      <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-      </ng-container>
-  
-      <!-- Weight Column -->
-      <ng-container matColumnDef="weight">
-        <th mat-header-cell *matHeaderCellDef> Weight </th>
-        <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-      </ng-container>
-  
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="symbol">
-        <th mat-header-cell *matHeaderCellDef> Symbol </th>
-        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-      </ng-container>
-  
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-  
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
-                   showFirstLastButtons
-                   aria-label="Select page of periodic elements">
-    </mat-paginator>
-  </div>
-  
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

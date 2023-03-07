@@ -11,6 +11,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator'; 
 import {MatListModule} from '@angular/material/list'; 
 import {MatGridListModule} from '@angular/material/grid-list'; 
+import {MatInputModule} from '@angular/material/input'; 
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatTableModule,
     MatPaginatorModule,
     MatListModule,
-    MatGridListModule
+    MatGridListModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
