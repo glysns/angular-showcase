@@ -8,7 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatIconModule} from '@angular/material/icon'; 
 import {MatTableModule} from '@angular/material/table'; 
-import {MatPaginatorModule} from '@angular/material/paginator';  
+import {MatPaginatorModule} from '@angular/material/paginator'; 
+import {MatListModule} from '@angular/material/list'; 
+import {MatGridListModule} from '@angular/material/grid-list'; 
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatTreeModule,
     MatIconModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatListModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

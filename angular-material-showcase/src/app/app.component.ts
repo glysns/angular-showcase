@@ -45,12 +45,55 @@ interface ExampleFlatNode {
   level: number;
 }
 
+export interface Section {
+  name: string;
+  updated: Date;
+}
+
+export interface Layout {
+  color: string;
+  cols: number;
+  rows: number;
+  text: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  layout: Layout[] = [
+    {text: 'Header', cols: 3, rows: 1, color: 'lightblue'},
+    {text: 'SideBar', cols: 1, rows: 2, color: 'lightgreen'},
+    {text: 'Menu', cols: 1, rows: 1, color: 'lightpink'},
+    {text: 'Content', cols: 2, rows: 1, color: '#DDBDF1'},
+  ];
+  folders: Section[] = [
+    {
+      name: 'Photos',
+      updated: new Date('1/1/16'),
+    },
+    {
+      name: 'Recipes',
+      updated: new Date('1/17/16'),
+    },
+    {
+      name: 'Work',
+      updated: new Date('1/28/16'),
+    },
+  ];
+  notes: Section[] = [
+    {
+      name: 'Vacation Itinerary',
+      updated: new Date('2/20/16'),
+    },
+    {
+      name: 'Kitchen Remodel',
+      updated: new Date('1/18/16'),
+    },
+  ];
+
   private _transformer = (node: FoodNode, level: number) => {
     return {
       expandable: !!node.children && node.children.length > 0,
