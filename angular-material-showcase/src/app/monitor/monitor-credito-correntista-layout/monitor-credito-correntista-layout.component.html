@@ -1,30 +1,47 @@
-<mat-grid-list cols="4" rowHeight="100px">
+<mat-grid-list cols="4" rowHeight="250px">
     <mat-grid-tile
         [colspan]="3"
         [rowspan]="1"
-        [style.background]="'lightblue'">
-        Header Safra
+        [style.background]="'#EDEDED'" >
+        <div class="example-button-row">
+            <button mat-fab color="basic" (click)="exibirAlertas()" style="margin-right: 5px;" aria-label="Example icon button with a delete icon">
+                <mat-icon>notification_important</mat-icon>
+              </button>
+            <button mat-fab color="basic" (click)="exibirPerfil()" style="margin-right: 5px;"  aria-label="Example icon button with a delete icon">
+                <mat-icon>person</mat-icon>
+              </button>
+              <button mat-fab color="basic" style="margin-right: 5px;"  aria-label="Example icon button with a delete icon">
+                <mat-icon>monetization_on</mat-icon>
+              </button>
+              <button mat-fab color="basic" style="margin-right: 5px;"  aria-label="Example icon button with a delete icon">
+                <mat-icon>cast_connected</mat-icon>
+              </button>
+              <button mat-fab color="basic" style="margin-right: 5px;"  aria-label="Example icon button with a delete icon">
+                <mat-icon>desktop_windows</mat-icon>
+              </button>
+              <button mat-fab color="basic" style="margin-right: 5px;"  aria-label="Example icon button with a delete icon">
+                <mat-icon>device_hub</mat-icon>
+              </button>
+        </div>
     </mat-grid-tile>
     <mat-grid-tile
         [colspan]="1"
         [rowspan]="2"
         [style.background]="'lightgreen'">
-        Rigth Sidebar
+       Barra Lateral Suspensa
     </mat-grid-tile>
     <mat-grid-tile
         [colspan]="1"
         [rowspan]="1"
         [style.background]="'lightpink'">
        
-        Menu (Tree Menu)
+       Dados Laterais
  
     </mat-grid-tile>
     <mat-grid-tile
     [colspan]="2"
     [rowspan]="1"
-    [style.background]="'#DDBDF1'">
-    Conteudo Dinamico
-
+    >
     <router-outlet></router-outlet>
   </mat-grid-tile>
   </mat-grid-list>

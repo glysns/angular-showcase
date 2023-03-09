@@ -80,7 +80,7 @@ export class ConsultaCreditoCorrentistaComponent {
 
   selecionar(row:any, evt:any){
     console.log(row);
-    this.router.navigate(['/monitor']);
+    this.router.navigate(['/monitor/perfil']);
   }
 }
 

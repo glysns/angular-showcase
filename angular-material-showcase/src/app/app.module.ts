@@ -13,6 +13,8 @@ import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list'; 
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import {MatTabsModule} from '@angular/material/tabs';
+ 
 
 import { ConsultaCreditoCorrentistaComponent } from './consulta-credito-correntista/consulta-credito-correntista.component';
 import { MonitorCreditoCorrentistaLayoutComponent } from './monitor/monitor-credito-correntista-layout/monitor-credito-correntista-layout.component';
@@ -47,7 +49,8 @@ import { MonitorCreditoCorrentistaAlertasComponent } from './monitor/monitor-cre
     MatListModule,
     MatGridListModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
