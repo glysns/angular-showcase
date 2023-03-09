@@ -17,4 +17,7 @@ export class MonitorCreditoCorrentistaLayoutComponent {
   exibirAlertas(){
     this.router.navigate(['/monitor/alertas']);
   }
+  sair(){
+    this.router.navigate(['/']);
+  }
 }
