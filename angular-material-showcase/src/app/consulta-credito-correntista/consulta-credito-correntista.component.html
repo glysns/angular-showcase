@@ -1,1 +1,105 @@
-<p>consulta-credito-correntista works!</p>
+ <!-- Resources -->
+ <h2>Crédito Correnstista PF - SEC</h2>
+ <form class="example-form">
+ 
+   <table class="example-full-width" cellspacing="0"><tr>
+     <td><mat-form-field class="example-full-width">
+       <mat-label>CPF</mat-label>
+       <input matInput>
+     </mat-form-field></td>
+     <td><mat-form-field class="example-full-width">
+       <mat-label>ID</mat-label>
+       <input matInput>
+     </mat-form-field></td>
+     <button mat-raised-button color="primary">Buscar</button>
+   </tr></table>
+
+ </form>
+ 
+ <div class="mat-elevation-z8">
+   <table mat-table [dataSource]="dsTable">
+ 
+     <!-- Position Column -->
+     <ng-container matColumnDef="id">
+       <th mat-header-cell *matHeaderCellDef> ID </th>
+       <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+     </ng-container>
+ 
+     <!-- Name Column -->
+     <ng-container matColumnDef="proponente">
+       <th mat-header-cell *matHeaderCellDef> PROPONENTE </th>
+       <td mat-cell *matCellDef="let element"> {{element.proponente}} </td>
+     </ng-container>
+ 
+     <!-- Weight Column -->
+     <ng-container matColumnDef="origem">
+       <th mat-header-cell *matHeaderCellDef> ORIGEM </th>
+       <td mat-cell *matCellDef="let element"> {{element.origem}} </td>
+     </ng-container>
+ 
+     <!-- Symbol Column -->
+     <ng-container matColumnDef="cpfCnpj">
+       <th mat-header-cell *matHeaderCellDef> CPF/CNPJ </th>
+       <td mat-cell *matCellDef="let element"> {{element.cpfCnpj}} </td>
+     </ng-container>
+
+     <ng-container matColumnDef="vip">
+      <th mat-header-cell *matHeaderCellDef> VIP </th>
+      <td mat-cell *matCellDef="let element"> {{element.vip}} </td>
+    </ng-container>
+    <ng-container matColumnDef="garantia">
+      <th mat-header-cell *matHeaderCellDef> GARANTIA </th>
+      <td mat-cell *matCellDef="let element"> {{element.garantia}} </td>
+    </ng-container>
+    <ng-container matColumnDef="dataInclusao">
+      <th mat-header-cell *matHeaderCellDef> DATA INCLUSÃO </th>
+      <td mat-cell *matCellDef="let element"> {{element.dataInclusao}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="alcada">
+      <th mat-header-cell *matHeaderCellDef> ALÇADA </th>
+      <td mat-cell *matCellDef="let element"> {{element.alcada}} </td>
+    </ng-container>
+ 
+    <ng-container matColumnDef="usuario">
+      <th mat-header-cell *matHeaderCellDef> USUARIO </th>
+      <td mat-cell *matCellDef="let element"> {{element.usuario}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tempoEspera">
+      <th mat-header-cell *matHeaderCellDef> ESPERA </th>
+      <td mat-cell *matCellDef="let element"> {{element.tempoEspera}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tempoAnalise">
+      <th mat-header-cell *matHeaderCellDef> ANALISE </th>
+      <td mat-cell *matCellDef="let element"> {{element.tempoAnalise}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="inicioAnalise">
+      <th mat-header-cell *matHeaderCellDef> INICIO ANALISE </th>
+      <td mat-cell *matCellDef="let element"> {{element.inicioAnalise}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="acoes">
+      <th mat-header-cell *matHeaderCellDef> ACOES </th>
+      <td mat-cell *matCellDef="let element"> 
+        <button mat-mini-fab matTooltip="Primary" color="primary" aria-label="Example fab with a heart icon">
+          <mat-icon>remove_red_eye</mat-icon>
+        </button>
+        <button mat-mini-fab matTooltip="Primary" color="primary" aria-label="Example fab with a heart icon">
+          <mat-icon>forward</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+   </table>
+ 
+   <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                  showFirstLastButtons
+                  aria-label="Select page of periodic elements">
+   </mat-paginator>
+ </div>
+ 
+

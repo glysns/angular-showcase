@@ -12,6 +12,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatListModule} from '@angular/material/list'; 
 import {MatGridListModule} from '@angular/material/grid-list'; 
 import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+
 import { ConsultaCreditoCorrentistaComponent } from './consulta-credito-correntista/consulta-credito-correntista.component';
 import { MonitorCreditoCorrentistaLayoutComponent } from './monitor/monitor-credito-correntista-layout/monitor-credito-correntista-layout.component';
 import { MonitorCreditoCorrentistaPerfilComponent } from './monitor/monitor-credito-correntista-perfil/monitor-credito-correntista-perfil.component';
@@ -44,7 +46,8 @@ import { MonitorCreditoCorrentistaAlertasComponent } from './monitor/monitor-cre
     MatPaginatorModule,
     MatListModule,
     MatGridListModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
