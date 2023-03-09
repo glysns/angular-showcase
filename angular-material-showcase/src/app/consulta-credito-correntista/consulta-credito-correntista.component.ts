@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { Router } from '@angular/router';
+
 import {FlatTreeControl} from '@angular/cdk/tree';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 
@@ -64,35 +66,8 @@ export interface Layout {
 })
 export class ConsultaCreditoCorrentistaComponent {
    
-  
-
-  private _transformer = (node: FoodNode, level: number) => {
-    return {
-      expandable: !!node.children && node.children.length > 0,
-      name: node.name,
-      level: level,
-    };
-  };
-
-  treeControl = new FlatTreeControl<ExampleFlatNode>(
-    node => node.level,
-    node => node.expandable,
-  );
-
-  treeFlattener = new MatTreeFlattener(
-    this._transformer,
-    node => node.level,
-    node => node.expandable,
-    node => node.children,
-  );
-
-  dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-
-  constructor() {
-    this.dataSource.data = TREE_DATA;
+  constructor(private router:Router) {
   }
-
-  hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
 
   displayedColumns: string[] = ['id', 'proponente', 'origem', 'cpfCnpj','vip','garantia','dataInclusao','alcada','usuario','tempoEspera','tempoAnalise','inicioAnalise','acoes'];
   dsTable = new MatTableDataSource<Proposta>(ELEMENT_DATA);
@@ -101,6 +76,11 @@ export class ConsultaCreditoCorrentistaComponent {
 
   ngAfterViewInit() {
     this.dsTable.paginator = this.paginator;
+  }
+
+  selecionar(row:any, evt:any){
+    console.log(row);
+    this.router.navigate(['/monitor']);
   }
 }
 

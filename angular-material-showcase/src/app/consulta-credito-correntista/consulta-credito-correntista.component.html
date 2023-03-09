@@ -1,4 +1,5 @@
  <!-- Resources -->
+ <div style="padding: 1px 25px;">
  <h2>Crédito Correnstista PF - SEC</h2>
  <form class="example-form">
  
@@ -87,7 +88,7 @@
         <button mat-mini-fab matTooltip="Primary" color="primary" aria-label="Example fab with a heart icon">
           <mat-icon>remove_red_eye</mat-icon>
         </button>
-        <button mat-mini-fab matTooltip="Primary" color="primary" aria-label="Example fab with a heart icon">
+        <button mat-mini-fab matTooltip="Primary" (click)="selecionar(element, $event)" color="primary" aria-label="Example fab with a heart icon">
           <mat-icon>forward</mat-icon>
         </button>
       </td>
@@ -101,5 +102,6 @@
                   aria-label="Select page of periodic elements">
    </mat-paginator>
  </div>
+
  
 
