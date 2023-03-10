@@ -1,47 +1,23 @@
-<mat-grid-list cols="4" rowHeight="250px">
-    <mat-grid-tile
-        [colspan]="3"
-        [rowspan]="1"
-        [style.background]="'#EDEDED'" >
-        <div class="example-button-row">
-            <button mat-fab color="basic" (click)="exibirAlertas()" style="margin-right: 5px;" aria-label="Example icon button with a delete icon">
-                <mat-icon>notification_important</mat-icon>
-              </button>
-            <button mat-fab color="basic" (click)="exibirPerfil()" style="margin-right: 5px;"  aria-label="Example icon button with a delete icon">
-                <mat-icon>person</mat-icon>
-              </button>
-              <button mat-fab color="basic" style="margin-right: 5px;"  aria-label="Example icon button with a delete icon">
-                <mat-icon>monetization_on</mat-icon>
-              </button>
-              <button mat-fab color="basic" style="margin-right: 5px;"  aria-label="Example icon button with a delete icon">
-                <mat-icon>cast_connected</mat-icon>
-              </button>
-              <button mat-fab color="basic" style="margin-right: 5px;"  aria-label="Example icon button with a delete icon">
-                <mat-icon>desktop_windows</mat-icon>
-              </button>
-              <button mat-fab color="basic" (click)="sair()" style="margin-right: 5px;"  aria-label="Example icon button with a delete icon">
-                <mat-icon>device_hub</mat-icon>
-              </button>
-        </div>
-    </mat-grid-tile>
-    <mat-grid-tile
-        [colspan]="1"
-        [rowspan]="2"
-        [style.background]="'lightgreen'">
-       Barra Lateral Suspensa
-    </mat-grid-tile>
-    <mat-grid-tile
-        [colspan]="1"
-        [rowspan]="1"
-        [style.background]="'lightpink'">
-       
-       Dados Laterais
- 
-    </mat-grid-tile>
-    <mat-grid-tile
-    [colspan]="2"
-    [rowspan]="1"
-    >
-    <router-outlet></router-outlet>
-  </mat-grid-tile>
-  </mat-grid-list>
+<div style="padding: 1px 25px;">
+<div class="example-button-row" style="padding: 15px 25px;">
+  <button mat-fab color="basic" (click)="exibirAlertas()" style="margin-right: 5px;" aria-label="Example icon button with a delete icon">
+      <mat-icon>notification_important</mat-icon>
+    </button>
+  <button mat-fab color="basic" (click)="exibirPerfil()" style="margin-right: 5px;"  aria-label="Example icon button with a delete icon">
+      <mat-icon>person</mat-icon>
+    </button>
+    <button mat-fab color="basic" style="margin-right: 5px;"  aria-label="Example icon button with a delete icon">
+      <mat-icon>monetization_on</mat-icon>
+    </button>
+    <button mat-fab color="basic" style="margin-right: 5px;"  aria-label="Example icon button with a delete icon">
+      <mat-icon>cast_connected</mat-icon>
+    </button>
+    <button mat-fab color="basic" style="margin-right: 5px;"  aria-label="Example icon button with a delete icon">
+      <mat-icon>desktop_windows</mat-icon>
+    </button>
+    <button mat-fab color="basic" (click)="sair()" style="margin-right: 5px;"  aria-label="Example icon button with a delete icon">
+      <mat-icon>device_hub</mat-icon>
+    </button>
+</div>
+  <router-outlet></router-outlet>
+  </div>
