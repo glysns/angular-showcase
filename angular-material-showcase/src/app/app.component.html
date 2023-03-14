@@ -7,84 +7,6 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<style>
- 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 8px 0;
-  }
-
-  p {
-    margin: 0;
-  }
-
-  .spacer {
-    flex: 1;
-  }
-
-  .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #EDEDED;
-    color: white;
-    font-weight: 600;
-  }
-
-  .toolbar img {
-    margin: 0 16px;
-  }
-
-
-  .toolbar #twitter-logo:hover,
-  .toolbar #youtube-logo:hover {
-    opacity: 0.8;
-  }
-
-  .content {
-    display: flex;
-    margin: 30px auto 32px;
-    flex-direction: column;
-   
-  }
-
-
-
-
-
-  span.title{
-    color: #00003C;
-    font-family: 'Roboto Slab';
-font-style: normal;
-font-weight: 300;
-font-size: 32px;
-line-height: 130%;
-  }
-  
-  
-</style>
-
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img
-    width="40"
-    [src]="'assets/img/indice.png'" alt="image"
-  />
-  <span class="title">Safra Mesa de Credito</span>
-    <div class="spacer"></div>
-</div>
-
-<div class="content" role="main">
- <router-outlet></router-outlet>
-</div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
@@ -94,4 +16,7 @@ line-height: 130%;
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<router-outlet></router-outlet>
+<app-header></app-header>
+<div class="content" role="main">
+  <router-outlet></router-outlet>
+</div>

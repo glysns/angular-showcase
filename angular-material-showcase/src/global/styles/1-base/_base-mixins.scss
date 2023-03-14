@@ -1,0 +1,34 @@
+@mixin resetContainer {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+@mixin flexLayoutCenter ($direction, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin flexLayoutAlignmentCustomize ($direction, $gap, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+
+@mixin fontFamilyStandard {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+}
+
+@mixin resetTable {
+  td, th {
+    border-bottom-style: none;
+  }
+}

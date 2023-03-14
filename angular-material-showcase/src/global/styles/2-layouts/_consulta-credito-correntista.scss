@@ -1,0 +1,133 @@
+@use '../1-base/base-mixins';
+@use '../1-base/variables';
+@use '../3-modules/button';
+
+.container {
+  @include base-mixins.resetContainer;
+  @include base-mixins.flexLayoutAlignmentCustomize(column, 0, left, center);
+  padding: 0 73px;
+
+  &__header {
+    @include base-mixins.resetContainer;
+    @include base-mixins.flexLayoutAlignmentCustomize(row, 0, space-between, center);
+
+    h1 {
+      @include base-mixins.fontFamilyStandard;
+      font-weight: 300;
+      font-size: 42px;
+      line-height: 130%;
+      color: variables.$color-primary;
+    }
+
+    &-subtitle {
+      @include base-mixins.resetContainer;
+      @include base-mixins.flexLayoutAlignmentCustomize(row, 0, left, center);
+
+      h2 {
+        @include base-mixins.fontFamilyStandard;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: variables.$color-secondary-subtitle;
+      }
+    }
+
+    button {
+      @include button.buttonHeaderStandard;
+      color: #ffffff;
+      width: 150px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 130%;
+      background-color: variables.$bg-dark;
+      padding: 5px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      #mat-icon-update {
+        color: #ffffff;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .form {
+    @include base-mixins.resetContainer;
+    @include base-mixins.flexLayoutAlignmentCustomize(row, 20px, left, center);
+
+    button {
+      @include button.buttonHeaderStandard;
+      background-color: variables.$bg-primary;
+      margin: 0 0 20px 0;
+      width: 35px;
+      height: 35px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      #mat-icon-search {
+        color: #ffffff;
+        font-size: 20px;
+      }
+    }
+
+    &__table-head-columns {
+      @include base-mixins.resetContainer;
+      @include base-mixins.flexLayoutAlignmentCustomize(row, 20px, left, center);
+      background-color: variables.$bg-dark-thead;
+      color: #ffffff;
+
+      p {
+        @include base-mixins.fontFamilyStandard;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 130%;
+        margin-left: 30px;
+      }
+    }
+  }
+
+  &__table {
+    @include base-mixins.resetTable;
+    @include base-mixins.resetContainer;
+    @include base-mixins.flexLayoutAlignmentCustomize(row, 0, left, center);
+    text-align: left;
+
+    th {
+      @include base-mixins.fontFamilyStandard;
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 150%;
+    }
+
+    td  {
+      @include base-mixins.fontFamilyStandard;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 150%;
+
+      button {
+        @include button.buttonHeaderStandard;
+        width: 30px;
+        height: 30px;
+        background-color: variables.$bg-primary;
+
+        mat-icon {
+          color: #ffffff;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &.action-buttons {
+        @include base-mixins.resetContainer;
+        @include base-mixins.flexLayoutAlignmentCustomize(row, 10px, center, center);
+      }
+    }
+  }
+}

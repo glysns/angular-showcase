@@ -65,11 +65,14 @@ export interface Layout {
   styleUrls: ['./consulta-credito-correntista.component.css']
 })
 export class ConsultaCreditoCorrentistaComponent {
-   
+
   constructor(private router:Router) {
   }
 
   displayedColumns: string[] = ['id', 'proponente', 'origem', 'cpfCnpj','vip','garantia','dataInclusao','alcada','usuario','tempoEspera','tempoAnalise','inicioAnalise','acoes'];
+
+  tableHeadColumns: string[] = ['MODALIDADE', 'QTD. NA FILA', 'QTD. EM ANÁLISE'];
+  tableBodyColumns: string[] = ['CTA.GAR.CDI', 'MUTUO NO CANAL', 'GLOBAL PF', 'FIN IMOB SFI TM'];
   dsTable = new MatTableDataSource<Proposta>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -112,5 +115,5 @@ const ELEMENT_DATA: Proposta[] = [
   {id: '10', proponente: 'ANA PAULA PEREIRA', origem:'AG', cpfCnpj: '005.193.391-00', vip:'SIM',garantia:'SUFOP', dataInclusao:'10/01/1022 15:00:43',alcada:'AN. JUNIOR',usuario:'DIOGSOU', tempoEspera:'00:07:01',tempoAnalise:'13:46:10',inicioAnalise:'07/03/2022 18:55:49' },
   {id: '11', proponente: 'ANA PAULA PEREIRA', origem:'AG', cpfCnpj: '005.193.391-00', vip:'SIM',garantia:'SUFOP', dataInclusao:'10/01/1022 15:00:43',alcada:'AN. JUNIOR',usuario:'DIOGSOU', tempoEspera:'00:07:01',tempoAnalise:'13:46:10',inicioAnalise:'07/03/2022 18:55:49' },
   {id: '12', proponente: 'ANA PAULA PEREIRA', origem:'AG', cpfCnpj: '005.193.391-00', vip:'SIM',garantia:'SUFOP', dataInclusao:'10/01/1022 15:00:43',alcada:'AN. JUNIOR',usuario:'DIOGSOU', tempoEspera:'00:07:01',tempoAnalise:'13:46:10',inicioAnalise:'07/03/2022 18:55:49' },
-  
+
 ];
