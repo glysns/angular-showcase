@@ -1,0 +1,9 @@
+@use '../1-base/base-mixins';
+@use '../1-base/variables';
+
+@mixin buttonHeaderStandard {
+  @include base-mixins.resetContainer;
+  @include base-mixins.flexLayoutAlignmentCustomize(row, 0, center, center);
+  border-color: transparent;
+  border-radius: 5px;
+}

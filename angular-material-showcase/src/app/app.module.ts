@@ -5,16 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatTreeModule} from '@angular/material/tree';
-import {MatIconModule} from '@angular/material/icon'; 
-import {MatTableModule} from '@angular/material/table'; 
-import {MatPaginatorModule} from '@angular/material/paginator'; 
-import {MatListModule} from '@angular/material/list'; 
-import {MatGridListModule} from '@angular/material/grid-list'; 
+import { SharedModule } from './shared/shared.module'
+
+import {MatIconModule} from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatListModule} from '@angular/material/list';
+import {MatGridListModule} from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/tabs';
- 
+import {MatTreeModule} from '@angular/material/tree';
+
 
 import { ConsultaCreditoCorrentistaComponent } from './consulta-credito-correntista/consulta-credito-correntista.component';
 import { MonitorCreditoCorrentistaLayoutComponent } from './monitor/monitor-credito-correntista-layout/monitor-credito-correntista-layout.component';
@@ -23,7 +25,7 @@ import { MonitorCreditoCorrentistaOperacaoComponent } from './monitor/monitor-cr
 import { MonitorCreditoCorrentistaInternasComponent } from './monitor/monitor-credito-correntista-internas/monitor-credito-correntista-internas.component';
 import { MonitorCreditoCorrentistaExternasComponent } from './monitor/monitor-credito-correntista-externas/monitor-credito-correntista-externas.component';
 import { MonitorCreditoCorrentistaHierarquiaComponent } from './monitor/monitor-credito-correntista-hierarquia/monitor-credito-correntista-hierarquia.component';
-import { MonitorCreditoCorrentistaAlertasComponent } from './monitor/monitor-credito-correntista-alertas/monitor-credito-correntista-alertas.component'; 
+import { MonitorCreditoCorrentistaAlertasComponent } from './monitor/monitor-credito-correntista-alertas/monitor-credito-correntista-alertas.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { MonitorCreditoCorrentistaAlertasComponent } from './monitor/monitor-cre
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+
+    SharedModule,
 
     MatTreeModule,
     MatIconModule,

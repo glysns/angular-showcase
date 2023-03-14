@@ -1,0 +1,36 @@
+@use '../3-modules/module-mixin';
+@use '../1-base/base-mixins';
+
+.header-monitor-sidenav {
+  @include base-mixins.resetContainer;
+}
+
+.toolbar {
+  &__button-toggle {
+    @include module-mixin.iconResetColor;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__img {
+    margin-left: 15px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &-title {
+    padding-right: 10px;
+  }
+
+  &-subtitle {
+    @include base-mixins.fontFamilyStandard;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 130%;
+  }
+}
+
